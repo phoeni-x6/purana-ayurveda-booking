@@ -5,6 +5,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { locations } from "../data/locations";
+import { treatments } from "../data/treatments";
 
 function LocationsSection() {
   return (
@@ -99,9 +100,14 @@ function LocationsSection() {
                   </p>
 
                   <div className="mt-3 space-y-2">
-                    {location.services.map((service) => (
+                    {location.treatmentIds
+                      .map((treatmentId) =>
+                        treatments.find((treatment) => treatment.id === treatmentId),
+                      )
+                      .filter((treatment) => treatment !== undefined)
+                      .map((treatment) => (
                       <div
-                        key={service}
+                        key={treatment.id}
                         className="flex items-center gap-2 text-sm text-[#533E23]/70"
                       >
                         <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#2F5D39]/10">
@@ -111,9 +117,9 @@ function LocationsSection() {
                           />
                         </span>
 
-                        {service}
+                        {treatment.name}
                       </div>
-                    ))}
+                      ))}
                   </div>
                 </div>
 

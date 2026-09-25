@@ -105,7 +105,7 @@ function TherapistsSection() {
                   </p>
 
                   <div className="mt-3 space-y-2">
-                    {therapist.treatments.map((treatment) => (
+                    {therapist.specialization.map((treatment) => (
                       <div
                         key={treatment}
                         className="flex items-center gap-2 text-sm text-[#533E23]/70"

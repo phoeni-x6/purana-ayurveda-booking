@@ -1,5 +1,4 @@
 import { useState } from "react";
-import type { FormEvent } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowLeft,
@@ -57,14 +56,6 @@ function Booking() {
     if (step > 1) {
       setStep((previous) => (previous - 1) as BookingStep);
     }
-  };
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    console.log("Booking submitted:", bookingData);
-
-    setStep(5);
   };
 
   const steps = [
