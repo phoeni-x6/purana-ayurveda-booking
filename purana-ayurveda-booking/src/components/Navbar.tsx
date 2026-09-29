@@ -28,28 +28,35 @@ function Navbar() {
             to="/treatments"
             className="transition hover:text-[#DFC24D]"
           >
-            Treatments
+            Locations
           </Link>
 
           <Link
-            to="/packages"
+            to="/events"
             className="transition hover:text-[#DFC24D]"
           >
-            Packages
+           Events
           </Link>
 
           <Link
             to="/consultation"
             className="transition hover:text-[#DFC24D]"
           >
-            Consultation
+           Online Consultation
+          </Link>
+
+          <Link
+            to="/about-ayu"
+            className="transition hover:text-[#DFC24D]"
+          >
+            About Ayurveda
           </Link>
 
           <Link
             to="/about"
             className="transition hover:text-[#DFC24D]"
           >
-            About
+            About Us
           </Link>
         </nav>
 
