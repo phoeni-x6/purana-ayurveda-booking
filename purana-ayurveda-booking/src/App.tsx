@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Booking from "./pages/Booking";
+import AboutAyurveda from "./pages/about-ayu";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/treatments" element={<Treatments />} />
           <Route path="/packages" element={<Packages />} />
           <Route path="/consultation" element={<Consultation />} />
+          <Route path="/about-ayu" element={<AboutAyurveda />} />
           <Route path="/about" element={<About />} />
         </Route>
 
